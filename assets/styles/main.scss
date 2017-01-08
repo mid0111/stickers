@@ -53,7 +53,10 @@ body {
 }
 
 .container {
-  padding: 50px;
+  padding: 30px;
+  @media #{$large} {
+    padding: 50px;
+  }
 }
 
 .content-header {
