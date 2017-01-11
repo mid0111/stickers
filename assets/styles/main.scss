@@ -30,6 +30,10 @@ body {
     background-color: lighten($background-color-line, 5%);
 }
 
+.text-center {
+  text-align: center;
+}
+
 .page-title-container {
   width: 100%;
   text-align: center;
@@ -44,11 +48,37 @@ body {
 }
 
 .main {
-  padding: 30px;
+  padding: 0 30px;
   @media #{$large} {
-    padding: 50px;
+    padding: 0 50px;
   }
 }
+
+.tabs {
+  overflow: hidden;
+  margin-bottom: 30px;
+  @media #{$large} {
+    margin-bottom: 50px;
+  }
+
+  .tab {
+    a {
+      color: $font-color-light;
+    }
+    a:hover {
+      color: $font-color-sub;
+    }
+    a.active {
+      color: $font-color-sub;
+    }
+  }
+
+  .indicator {
+    background-color: $background-color-dark;
+  }
+}
+
+
 
 .content-header {
   margin-bottom: 50px;
@@ -85,4 +115,8 @@ body {
       width: 100%;
     }
   }
+}
+
+.p-side {
+  padding: 0 0.75rem !important;
 }

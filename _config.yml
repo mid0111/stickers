@@ -31,3 +31,9 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+
+custom:
+  base_url: https://mid0111.github.io/stickers
+  pages:
+    - name: uzumaru-1
+      chat: [3,4,7,12]

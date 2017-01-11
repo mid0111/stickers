@@ -6,7 +6,14 @@
 
 <div class="main">
 
-  <div class="content-item">
+  <div class="row">
+    <ul class="tabs">
+      <li class="tab col s6"><a class="active" href="#home">HOME</a></li>
+      <li class="tab col s6"><a href="#copy-link">PC チャット用</a></li>
+    </ul>
+  </div>
+
+  <div id="home">
     <div class="content-header clearfix">
       <div class="content-image">
         <img src="assets/images/uzumaru-1/main.png" alt="uzumaru-san-1">
@@ -16,7 +23,7 @@
         <p>うず丸さんスタンプ第一弾。<br>プログラマーやエンジニア界隈の用語をときどき使います。とり年にあやかってペンギンっぽい着ぐるみにうずまってます。</p>
       </div>
       <div class="content-action">
-        <a class="btn waves-effect waves-light">LINE ストアで見る</a>
+        <a class="btn waves-effect waves-light btn-line">LINE ストアで見る</a>
       </div>
     </div>
 
@@ -25,8 +32,26 @@
         <img src="assets/images/uzumaru-1/all.png" alt="uzumaru-san-1-all">
       </div>
     </div>
-
   </div>
-</div>
 
-{% include footer.html %}
+  <div id="copy-link">
+    <div class="content-header clearfix">
+      <div class="content-title p-side">
+        <p>公開中のスタンプの一部イメージを配布しています。<br>リンクをコピーして slack や mattermost にスタンプを貼り付けてご利用ください。</p>
+      </div>
+    </div>
+    <div class="content-body">
+      <div class="row">
+        {% for custom in site.custom.pages %} {% for i in custom.chat %}
+        <div class="col s12 m4 l3 text-center">
+          <div class="image-box">
+            <img src="assets/images/{{custom.name}}/{{i}}.png" alt="{{custom.name}}-{{i}}">
+          </div>
+          <button class="btn waves-effect waves-light btn-copy" data-clipboard-text="{{site.custom.base_url}}/assets/images/{{custom.name}}/{{i}}.png">リンクをコピー</button>
+        </div>
+        {% endfor %} {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  {% include footer.html %}
