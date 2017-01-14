@@ -37,3 +37,5 @@ custom:
   pages:
     - name: uzumaru-1
       chat: [3,4,7,12]
+  push:
+    server_url: https://mid0111-push.herokuapp.com/stickers
