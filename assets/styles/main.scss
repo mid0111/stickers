@@ -1,7 +1,6 @@
 ---
 ---
 
-@import url(https://fonts.googleapis.com/earlyaccess/notosansjp.css);
 @import "screen";
 @import "color";
 @import "mixin";
@@ -17,7 +16,7 @@ html {
 }
 
 body {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
   color: $font-color-main;
   font-size: 100%;
 }
