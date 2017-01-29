@@ -1,0 +1,18 @@
+<div class="content-header clearfix">
+  <div class="content-title p-side">
+    <p>公開中のスタンプの一部イメージを配布しています。<br>slack や mattermost などの chat やパワーポイントの素材などにご利用ください。</p>
+  </div>
+</div>
+<div class="content-body">
+  <div class="row">
+    {% for custom in site.custom.pages %}
+    {% for i in custom.chat %}
+    <div class="col s12 m4 l3 text-center">
+      <div class="image-box btn-copy" data-clipboard-text="{{site.custom.base_url}}/assets/images/{{custom.name}}/{{i}}.png">
+        <img src="assets/images/{{custom.name}}/{{i}}.png" alt="{{custom.name}}-{{i}}">
+      </div>
+    </div>
+    {% endfor %}
+    {% endfor %}
+  </div>
+</div>

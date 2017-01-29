@@ -9,49 +9,16 @@
   <div class="row">
     <ul class="tabs">
       <li class="tab col s6"><a class="active" href="#home">HOME</a></li>
-      <li class="tab col s6"><a href="#copy-link">PC チャット用</a></li>
+      <li class="tab col s6"><a href="#images">PC チャット用</a></li>
     </ul>
   </div>
 
   <div id="home">
-    <div class="content-header clearfix">
-      <div class="content-image">
-        <img src="assets/images/uzumaru-1/main.png" alt="uzumaru-san-1">
-      </div>
-      <div class="content-title">
-        <h3>うず丸さん 〜エンジニア編〜</h3>
-        <p>うず丸さんスタンプ第一弾。<br>プログラマーやエンジニア界隈の用語をときどき使います。とり年にあやかってペンギンっぽい着ぐるみにうずまってます。</p>
-      </div>
-      <div class="content-action">
-        <a href="http://line.me/S/sticker/1372618" target="_blank" class="btn waves-effect waves-light btn-line">LINE ストアで見る</a>
-      </div>
-    </div>
-
-    <div class="content-body">
-      <div class="image-box">
-        <img src="assets/images/uzumaru-1/all.png" alt="uzumaru-san-1-all">
-      </div>
-    </div>
+    {% include home.html %}
   </div>
 
-  <div id="copy-link">
-    <div class="content-header clearfix">
-      <div class="content-title p-side">
-        <p>公開中のスタンプの一部イメージを配布しています。<br>リンクをコピーして slack や mattermost にスタンプを貼り付けてご利用ください。</p>
-      </div>
-    </div>
-    <div class="content-body">
-      <div class="row">
-        {% for custom in site.custom.pages %} {% for i in custom.chat %}
-        <div class="col s12 m4 l3 text-center">
-          <div class="image-box">
-            <img src="assets/images/{{custom.name}}/{{i}}.png" alt="{{custom.name}}-{{i}}">
-          </div>
-          <button class="btn waves-effect waves-light btn-copy" data-clipboard-text="{{site.custom.base_url}}/assets/images/{{custom.name}}/{{i}}.png">リンクをコピー</button>
-        </div>
-        {% endfor %} {% endfor %}
-      </div>
-    </div>
+  <div id="images">
+    {% include images.html %}
   </div>
 </div>
 

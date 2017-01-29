@@ -35,7 +35,19 @@ exclude:
 custom:
   base_url: https://mid0111.github.io/stickers
   pages:
+    - name: uzumaru-2
+      title: うず丸さん 〜サボテン編〜
+      description: |
+        着ぐるみ大好きうず丸さんスタンプ第二弾。<br>
+        サボテンにうずまってみました。
+      lineId:
+      chat: ["01","02","03","12","17","19","20","22"]
     - name: uzumaru-1
-      chat: [3,4,7,12]
+      title: うず丸さん 〜エンジニア編〜
+      description: |
+        うず丸さんスタンプ第一弾。<br>
+        プログラマーやエンジニア界隈の用語をときどき使います。とり年にあやかってペンギンっぽい着ぐるみにうずまってます。
+      chat: ["3","4","7","12"]
+      lineId: 1372618
   push:
     server_url: https://mid0111-push.herokuapp.com/stickers

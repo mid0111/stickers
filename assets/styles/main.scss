@@ -4,6 +4,7 @@
 @import url(https://fonts.googleapis.com/earlyaccess/notosansjp.css);
 @import "screen";
 @import "color";
+@import "mixin";
 
 html,
 body,
@@ -28,6 +29,12 @@ body {
 }
 .btn:hover {
     background-color: lighten($background-color-line, 5%);
+}
+
+.btn.desable {
+  background-color: $font-color-light;
+  color: $font-color-invert;
+  padding: 0 1rem;
 }
 
 .text-center {
@@ -78,7 +85,10 @@ body {
   }
 }
 
-
+.image-list .content {
+  min-height: 240px;
+  margin-bottom: 50px;
+}
 
 .content-header {
   margin-bottom: 50px;
@@ -110,11 +120,15 @@ body {
   width: 100%;
   color: $font-color-sub;
   .image-box {
-    margin: 0 auto;
+    margin: 50px auto 0;
     img {
       width: 100%;
     }
   }
+}
+
+.btn-copy {
+  cursor: pointer;
 }
 
 .p-side {

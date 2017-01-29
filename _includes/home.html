@@ -1,0 +1,22 @@
+<div class="image-list">
+  {% for content in site.custom.pages %}
+  <div class="content">
+    <div class="content-header clearfix">
+      <div class="content-image">
+        <img src="assets/images/{{ content.name }}/main.png" alt="{{ content.name }}">
+      </div>
+      <div class="content-title">
+        <h3>{{ content.title }}</h3>
+        <p>{{ content.description }}</p>
+      </div>
+      <div class="content-action">
+        {% if content.lineId %}
+        <a href="http://line.me/S/sticker/{{ content.lineId }}" target="_blank" class="btn waves-effect waves-light btn-line">LINE ストアで見る</a>
+        {% else %}
+        <a href="http://line.me/S/sticker/{{ content.lineId }}" target="_blank" class="btn waves-effect waves-light desable">LINE ストアで見る</a> ※近日公開予定
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
